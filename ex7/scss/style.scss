@@ -1,0 +1,35 @@
+%btn{
+   cursor: pointer;
+   border: 1.5px solid;
+   border-radius: 2.5px;
+   padding: 3px 11px;
+   transition-duration: 0.2s;
+}
+
+.btn-basic{
+   @extend %btn;
+   color: #f0f0f0;
+
+   $bg: #211a1e;
+   background-color: $bg;
+   border-color: lighten($bg, 20%);
+
+   &:hover{
+      background-color: lighten($bg, 10%);
+      border-color: lighten($bg, 20%);
+   }
+}
+
+.btn-follow{
+   @extend %btn;
+   color: #f0f0f0;
+
+   $bg: #0099ff;
+   background-color: $bg;
+   border-color: lighten($bg, 20%);
+
+   &:hover{
+      background-color: darken($bg, 7%);
+      border-color: lighten($bg, 10%);
+   }
+}
