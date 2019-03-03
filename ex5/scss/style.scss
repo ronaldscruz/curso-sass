@@ -1,0 +1,21 @@
+@mixin boxSizing($sizing: content-box){
+   -moz-box-sizing: $sizing;
+   -webkit-box-sizing: $sizing;
+   box-sizing: $sizing;
+}
+
+p{
+   @include boxSizing($sizing: border-box)
+}
+
+// 
+
+@mixin borderRadius($radius...){
+   -webkit-border-radius: $radius;
+   -moz-border-radius: $radius;
+   border-radius: $radius;
+}
+
+button{
+   @include borderRadius(5px 10px 5px 10px);
+}
