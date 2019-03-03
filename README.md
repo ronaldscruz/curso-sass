@@ -2,7 +2,7 @@
 Curso de Sass - Amanda Vilela
 
 
-##Exercícios
+## Exercícios
 - Exercício 1: Seletores e propriedades aninhadas
 - Exercício 2: Variáveis
 - Exercício 3: Herança @extend
