@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import "partials/_functions";
+@import "partials/_variables";
+@import "partials/_media_queries";
+@import "partials/_mixins";
+
+* {
+   margin: 0;
+   padding: 0;
+   -webkit-box-sizing: $br-box;
+   -moz-box-sizing: $br-box;
+   box-sizing: $br-box;
+}
+
+html {
+   font-size: rem(16px)
+}
+
+ul {
+   padding: 0;
+   margin: 0;
+}
+
+img {
+   border: 0;
+}
+
+a {
+   text-decoration: $no;
+}
+
+body {
+   background: #fafafa;
+}
+
+main {
+   width: 90%;
+   max-width: 935px;
+   margin: $z-auto;
+}
+
+header {
+   display: $flx;
+   margin: 30px 0;
+   flex-flow: column;
+
+   .avatar {
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      margin: $z-auto;
+   }
+
+   .desc {
+      text-align: center;
+   }
+
+   h1,h2 {
+      display: $ln-block;
+      margin: 10px 0;
+   }
+
+   h1 {
+      font-size: rem(28px);
+   }
+   h2 {
+      font-size: rem(24px);
+   }
+
+   .links {
+      list-style: $no;
+      margin: 10px 0;
+
+      li{
+         list-style: $no;
+         margin: 0 20px 0 0;
+         display: $ln-block;
+      }
+   }
+
+   @include large{
+      flex-flow: row;
+
+      .avatar{
+         margin: 0 40px;
+      }
+
+      .desc{
+         text-align: left;
+      }
+   }
+ 
+}
+
+.btn-follow {
+   margin: 0 20px;
+   padding: 6px 14px;
+   border-width: 1px;
+   border-style: solid;
+   border-color: $azul;
+   color: $azul;
+   -webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+   border-radius: 4px;
+
+   &:hover{
+      background: $azul;
+      color: #fff;
+   }
+}
+
+.photos {
+   list-style: $no;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   display: $flx;
+
+   li{
+      width: 100%;
+      margin: 20px 0;
+      position: relative;
+
+      img{
+         width: 100%;
+      }
+
+      .img-hover{
+         opacity: 0;
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: rgba(0, 0, 0, 0.3);
+         transition: all 0.3s linear;
+      }
+
+      &:hover{
+         .img-hover{
+            opacity: 1;
+         }
+      }
+   }
+
+   @include large{
+      li {
+         width: 30%;
+      }
+   }
+}

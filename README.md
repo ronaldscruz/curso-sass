@@ -11,3 +11,4 @@ Curso de Sass - Amanda Vilela
 - Exercício 6: Funções
 - Exercício 7: Placeholders
 - Exercício 8: Media Queries
+- Exercício 9: @import & partials

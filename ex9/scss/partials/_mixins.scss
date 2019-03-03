@@ -1,0 +1,11 @@
+@mixin large{
+   @media (min-width: $desktop-min){
+      @content;
+   }
+}
+
+@mixin small{
+   @media (min-width: $mobile-min){
+      @content;
+   }
+}
